@@ -1,0 +1,76 @@
+@media (max-width: 1200px) {
+    body {
+        background-color: #555;
+
+    }
+
+    .fundo-video {
+        display: none;
+        /*se a tela for menor q 1200px n tera video*/
+    }
+
+    .container {
+        flex-wrap: wrap;
+        /*tira a rolagem debaixo*/
+        justify-content: center;
+        /*deixar o mario no centro*/
+        height: auto;
+        /*autura automatica*/
+        gap: 30px;
+        /*da uma desgrudada o mario*/
+    }
+
+    .container .mario {
+        max-width: 50%;
+        /*diminui o mario de acordo com o a tela do dispisitivo*/
+    }
+
+    .container .informacoes {
+        display: flex;
+        align-items: center;
+        /*alinha no centro*/
+        flex-direction: column;
+        /*pra fcr um debaixo do outro coluna*/
+    }
+
+    .container .descricao {
+        color: #ffffff;
+        text-align: center;
+        /*alinha o texto ao centro*/
+    }
+
+    .container .botao-trailer {
+        background-color: #263238;
+    }
+}
+
+@media (max-width: 500px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        /*desgrudar um pouco */
+    }
+
+    .container .imagem-titulo {
+        max-width: 75%;
+        /*diminui o titulo de acordo com o dispositivo*/
+    }
+
+    .modal .fechar-modal {
+        width: 30px;
+        line-height: 30px;
+    }
+
+    .modal #video {
+        width: 300px;
+        height: 169px;
+    }
+}
+
+@media (max-width: 376px) {
+    .modal #video {
+        width: 250px;
+        height: 140px;
+    }
+}

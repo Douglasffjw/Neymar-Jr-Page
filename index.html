@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="src/imagens/ney-capa.png" type="image/x-icon">
+    <!-- pra mudar a figurinha do titulo-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <title>Neymar Jr Page</title>
+</head>
+
+<body>
+    <div class="fundo-video">
+        <video class="video" autoplay loop muted>
+            <source src="./src/video/ney.mp4" type="video/mp4" alt="traile do video">
+            <!--Type indica pro navegador q tipo é mp4 e etc..-->
+            <!-- 1- Autoplay começar a tocar sozinho,
+        2- Loop quando terminar começa de novo
+        3- Muted mutar o video -->
+        </video>
+    </div>
+
+    <header class="cabecalho">
+        <a>
+            <img class="logo" src="./src/imagens/logoney.png" alt="logo chapeu mario">
+        </a>
+        <nav>
+            <ul class="menu"> <!--lista desordenada-->
+                <li><a href="#">Capa</a></li> <!--listas-->
+                <li><a href="#">Detalhes</a></li> <!--com o href faz o menu ser clicavel-->
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="informacoes">
+            <img class="imagem-titulo" src="./src/imagens/titulo.png" alt="image do titulo do filme">
+            <p class="descricao">Neymar da Silva Santos Júnior é um futebolista brasileiro que atua como atacante.
+                Atualmente joga pelo Paris Saint-Germain e pela Seleção Brasileira. É considerado o principal
+                futebolista
+                brasileiro da atualidade e um dos melhores futebolistas do mundo.
+                <br>Separei um vídeo mostrando um pouco de suas skills, clique abaixo.
+                <br>👇🏽😎
+            </p>
+            <button class="botao-trailer">NEYMAR SKILLS👑
+            </button>
+        </div>
+        <img class="mario" src="./src/imagens/ney-capa.png" alt="foto do mario">
+        <div class="modal">
+            <div class="conteudo-modal">
+                <span class="fechar-modal">X</span>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/mWdpyPYzbuE"
+                    title="YouTube video player" frameborder="1" allow="accelerometer; autoplay;
+                  clipboard-write; encrypted-media;
+                   gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

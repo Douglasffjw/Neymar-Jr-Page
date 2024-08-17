@@ -1,0 +1,13 @@
+*{
+    margin: 0; /*remove as margens*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none; /*deixar qualquer lista sem estilo*/
+}
+
+a{
+    text-decoration: none;/*tira a decoraçao do link*/
+}

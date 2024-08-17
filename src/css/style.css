@@ -1,0 +1,143 @@
+body{
+    font-family: 'Poppins';
+}
+
+.cabecalho{
+    display: flex; /*vai os nome pro lado*/
+    justify-content: space-between; /*divide o espaço entre os elementos*/
+    padding: 30px; /*tamanho do cabeçalho*/
+    max-width: 1440px;  /*deixa o cabeçalho menor*/ 
+    margin: 0 auto;   /*deixa o cabeçalho no meio*/
+
+}
+
+.cabecalho .logo{
+    width: 65px; /*largura do logo*/
+    
+}
+
+.cabecalho .menu{
+    display: flex;
+    align-items: center; /*alinha no meio pra dps usar o higth*/
+    height: 100%;
+}
+
+.cabecalho nav li a {
+    font-weight: bold;/*deixar o A em negrito*/
+    color: #ffffff;
+    font-size: 25px; /*tamanhoo da fontee*/
+    padding: 10px 20px; /*separa o conteudo home e detalhe*/
+    border-radius: 50px; /*arredondar as bordas do botao*/
+    transition: 0.2s; /*tempo de transiçao ao tocar nas bordas*/
+}
+
+.cabecalho nav li a:hover { /*passar o mouse por cima*/
+    background-color: #555;
+}
+
+.container{ /*main*/
+    max-width: 1440px;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    height: calc(100vh -
+    132px); /*altura da visualisaçao do usuario*/
+    padding: 0 30px 30px; /*0 em cima e 30 do lado e embaixo*/
+ }
+
+ .container .imagem-titulo{
+     max-width: 500px;
+ }
+
+ .container .descricao{
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+ }
+
+ .container .botao-trailer{
+    background-color: rgb(86, 79, 78);
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold; /*negrito*/
+    cursor: pointer;/*vira uma mao*/
+    border: none;/*tira a borda*/
+    text-transform: uppercase;/*td maiusculo*/
+    transition: 0.5s all ease-in-out;
+}
+
+.container .botao-trailer:hover{ /*transicao do botao */
+    transform: scale(1.1);
+}
+
+.fundo-video {
+    background-color: red;
+    position: absolute;
+    z-index: -1;/*fica la tras o video*/
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;/*esconde o transbordo*/
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video{
+    height: 100vh;
+}
+
+.fundo-video::after{/*depois*/
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;/*alinhado ao topo*/
+    left: 0;/*e a esquerda*/
+    background: linear-gradient(90deg,
+     rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.8) 50%,
+       rgba(0,0,0,1) 100%);
+}
+
+.modal {
+    position: fixed;/*smp na msm posicao*/
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749);/*opacidade*/
+    visibility: hidden;
+}
+
+.conteudo-modal{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;/*o x fica na coluna horisontal*/
+    border-radius: 5px;
+    gap: 15px;/*espaco do x com video*/
+}
+
+.fechar-modal{
+    background-color: #ffffff;
+    color: lightsalmon;
+    font-weight: bold;/*negrito*/
+    font-size: 20px;/*pra fcr maior*/
+    width: 40px;
+    text-align: center;
+    cursor: pointer;/*maozinha*/
+    border-radius: 10px;
+}
+
+.modal iframe{
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+
+.modal.aberto{
+    opacity: 1;
+    visibility: visible;
+}
